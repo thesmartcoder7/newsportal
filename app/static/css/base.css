@@ -146,6 +146,7 @@ main {
 
 #hero .hero-content .title .headline {
   width: 70%;
+  padding-right: 5%;
 }
 
 #hero .hero-content .title .headline h3 {
