@@ -17,8 +17,10 @@
   </head>
   <body>
     <main>
+      <!-- hero section -->
       <section id="grey"></section>
       <section id="hero">
+        <!-- header section -->
         <header>
           <div class="logo">
             <h1>News<span>Portal</span></h1>
@@ -44,6 +46,7 @@
             </ul>
           </div>
         </header>
+        <!-- hero content -->
         <div class="hero-content">
           <div class="tag">
             <h2>latest</h2>
@@ -72,7 +75,17 @@
           </div>
         </div>
       </section>
-      <footer><p>this is the footer</p></footer>
+
+      <!-- main content section -->
+      {% block content%}{% endblock %}
+
+      <!-- footer section -->
+      <footer>
+        <p class="footer-text">
+          &copy; All Rights Reserved | <span class="year"></span>
+        </p>
+      </footer>
     </main>
+    <script src="{{url_for('static', filename='js/base.js')}}"></script>
   </body>
 </html>
