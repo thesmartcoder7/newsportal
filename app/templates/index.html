@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+<!-- css linking block -->
+{% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css')}}"
+/>
+{% endblock %}
 <!-- title block -->
 {% block title%}
 <title>Home</title>
@@ -40,5 +47,81 @@
   </div>
 </section>
 {% endblock %}
-<br />
-{% block content %} {% endblock %}
+
+<!-- block content section -->
+{% block content %}
+<section id="top-headlines">
+  <div class="title">
+    <h3>Top headlines</h3>
+    <hr />
+  </div>
+  <div class="articles">
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <div class="article-image">
+        <img src="../static/images/sample.jpg" alt="sample" />
+      </div>
+      <div class="article-content">
+        <a href="" target="blank">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          enim sequi. Libero molestias quia cupiditate.</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

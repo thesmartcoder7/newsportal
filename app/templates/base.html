@@ -13,6 +13,8 @@
       rel="stylesheet"
       href="{{url_for('static', filename='css/base.css')}}"
     />
+    {% block css %}{% endblock %}
+    <!-- title block -->
     {% block title %}{% endblock %}
   </head>
   <body>
