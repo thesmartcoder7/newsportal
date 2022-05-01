@@ -5,5 +5,6 @@ from ..requests import get_category_headlines, get_headlines, get_source_headlin
 
 @main.route("/")
 def home():
-    get_headlines("us")
+    all_headlines = get_headlines("us")
+    print(all_headlines)
     return render_template("index.html")
