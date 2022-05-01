@@ -1,10 +1,45 @@
 /* - - - top headlines styling - - - */
 #top-headlines,
 #finance,
-#entertainment {
+#entertainment,
+#sources {
   width: 100%;
   padding: 5% 14%;
   backdrop-filter: blur(0.05vw);
+}
+
+#sources .outlets {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#sources .outlets a {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9b018;
+  display: inline-block;
+  width: 20%;
+  padding: 2.5vw 0;
+  margin: 2%;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 1vw;
+  text-transform: capitalize;
+  font-weight: 900;
+  transition: 0.2s ease-in-out;
+}
+
+#sources .outlets a:hover {
+  box-shadow: 0 0 0.5vw 0.1vw #1c1c1c50;
+}
+
+#sources .outlets .outlet {
+  width: 100%;
 }
 
 .title {
@@ -92,6 +127,7 @@
 .banner .top .details .date {
   color: #fff;
   margin-top: 1%;
+  font-size: 0.9vw;
 }
 
 .banner .dummy {
