@@ -36,6 +36,20 @@ def get_all_articles(url):
     return headlines
 
 
+def get_headlines(country):
+    headlines_url = country_based_headlines.format(country, api_key)
+    return get_all_articles(headlines_url)                   
+
+
+def get_source_headlines(source):
+    headlines_url = source_headlines.format(source, api_key)
+    return get_all_articles(headlines_url)
+
+
+def get_category_headlines(courtry, category):
+    headlines_url = country_base_headlines_category.format(courtry, category, api_key)
+    return get_all_articles(headlines_url)
+
 
 def get_sources():
     sources_url = all_sources.format(api_key)
