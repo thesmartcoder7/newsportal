@@ -4,12 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  letter-spacing: 0.05vw;
 }
 
 body,
 main {
   width: 100%;
-  height: 100vh;
 }
 
 main {
@@ -163,7 +163,7 @@ main {
 }
 
 #hero .hero-content .title .headline a:hover {
-  color: #fdde89;
+  color: #dcdddd;
 }
 
 #hero .hero-content .title .calendar {
@@ -177,25 +177,79 @@ main {
 }
 
 #hero .hero-content .title .calendar svg {
-  color: #dcdddd;
+  color: #e9b018;
   width: 3vw;
   height: 3vw;
   margin: 0.5vw;
 }
 
 #hero .hero-content .title .calendar .month {
-  color: #dcdddd;
+  color: #e9b018;
   font-size: 1.5vw;
   margin: 0.5vw;
 }
 
 #hero .hero-content .title .calendar .date {
   display: inline;
-  color: #dcdddd;
-  font-size: 1.3vw;
+  color: #e9b018;
+  font-size: 2vw;
   width: 3vw;
   text-align: center;
   margin: 0.5vw;
+}
+
+/* - - - latest articles styling - - - */
+#latest {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  padding: 10% 15%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: -15%;
+  z-index: 2;
+}
+
+#latest div {
+  width: 30vw;
+  height: 15vw;
+  filter: grayscale(0);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #e9b018;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#latest .second {
+  color: #e9b018;
+  background-color: #1c1c1c;
+}
+
+#latest .second a {
+  color: #e9b018;
+}
+
+#latest div h3 {
+  font-size: 1.1vw;
+  font-weight: 500;
+  margin-top: 2%;
+  letter-spacing: 0.07vw;
+  margin-bottom: 5%;
+}
+
+#latest div a {
+  position: relative;
+  margin-top: 3%;
+  text-decoration: none;
+  font-size: 0.9vw;
+  font-weight: 700;
+  color: #1c1c1c;
 }
 
 /* - - - footer styling - - - */

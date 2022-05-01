@@ -53,12 +53,14 @@
           </div>
           <div class="title">
             <div class="headline">
+              {% block latest %}
               <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Obcaecati voluptatem officia enim atque sit nisi expedita
                 aliquid, consequatur illum omnis.
               </h3>
-              <a href="">Read More</a>
+              <a href="">Read More . . . </a>
+              {% endblock %}
             </div>
             <div class="calendar">
               <svg aria-hidden="true" role="img" viewBox="0 0 15 15">
@@ -75,6 +77,32 @@
           </div>
         </div>
       </section>
+
+      {% block postlatest %}
+      <section id="latest">
+        <div class="first">
+          <h3 class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
+            illum harum.
+          </h3>
+          <a href="">Read More . . . </a>
+        </div>
+        <div class="second">
+          <h3 class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
+            illum harum.
+          </h3>
+          <a href="">Read More . . . </a>
+        </div>
+        <div class="third">
+          <h3 class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius
+            illum harum.
+          </h3>
+          <a href="">Read More . . . </a>
+        </div>
+      </section>
+      {% endblock %}
 
       <!-- main content section -->
       {% block content%}{% endblock %}
