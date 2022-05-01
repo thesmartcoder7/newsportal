@@ -47,11 +47,19 @@
   </div>
   <div class="banner">
     <div class="dummy">
-      <h3>{{ data[0][4].description | truncate(60) }}</h3>
+      <h3>{{ data[0][4].description | truncate(50) }}</h3>
       <br />
       <a href=" {{ data[0][4].url }}" target="blank">Read Now</a>
     </div>
-    <div class="top">
+    <div
+      class="top"
+      style="background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url({{data[0][4].image}})"
+    >
       <p>{{ data[0][4].content | truncate(350) }}</p>
       <div class="details">
         <div class="name">
@@ -68,72 +76,22 @@
     </div>
   </div>
   <div class="articles">
+    {% for i in range(5, 11) %}
     <div class="content">
       <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
+        <img src="{{ data[0][i].image }}" alt="{{ data[0][i].title}}" />
       </div>
       <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
+        <a href="{{ data[0][i].url }}" target="blank">
+          {{ data[0][i].description | truncate(110)}}</a
         >
       </div>
+      <br />
+      <hr />
+      <br />
+      <p>{{ data[0][i].date }}</p>
     </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -186,23 +144,25 @@
 <!-- finance section -->
 <section id="finance">
   <div class="title">
-    <h3>finance</h3>
+    <h3>business</h3>
     <hr />
   </div>
   <div class="banner">
     <div class="dummy">
-      <h3>This is the title of the article</h3>
+      <h3>{{ data[1][0].description | truncate(50) }}</h3>
       <br />
-      <a href="">Read Now</a>
+      <a href=" {{ data[1][0].url }}" target="blank">Read Now</a>
     </div>
-    <div class="top">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam
-        provident beatae nam at, recusandae cupiditate vitae obcaecati
-        repellendus dignissimos voluptatum ut vero excepturi dolor quos magnam
-        saepe placeat ab. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nesciunt rem delectus at. Alias, reprehenderit cum?
-      </p>
+    <div
+      class="top"
+      style="background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url({{data[1][0].image}})"
+    >
+      <p>{{ data[1][0].content | truncate(350) }}</p>
       <div class="details">
         <div class="name">
           <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
@@ -211,79 +171,29 @@
               d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
             />
           </svg>
-          <span>Samuel Martins</span>
+          <span>{{ data[1][0].author }}</span>
         </div>
-        <div class="date">Published on: 03-04-2022</div>
+        <div class="date">Published on: {{ data[1][0].date }}</div>
       </div>
     </div>
   </div>
   <div class="articles">
+    {% for i in range(1, 7) %}
     <div class="content">
       <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
+        <img src="{{ data[1][i].image }}" alt="{{ data[1][i].title}}" />
       </div>
       <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
+        <a href="{{ data[1][i].url }}" target="blank">
+          {{ data[1][i].description | truncate(110)}}</a
         >
       </div>
+      <br />
+      <hr />
+      <br />
+      <p>{{ data[1][i].date }}</p>
     </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -295,18 +205,20 @@
   </div>
   <div class="banner">
     <div class="dummy">
-      <h3>This is the title of the article</h3>
+      <h3>{{ data[2][0].description | truncate(50) }}</h3>
       <br />
-      <a href="">Read Now</a>
+      <a href=" {{ data[2][0].url }}" target="blank">Read Now</a>
     </div>
-    <div class="top">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam
-        provident beatae nam at, recusandae cupiditate vitae obcaecati
-        repellendus dignissimos voluptatum ut vero excepturi dolor quos magnam
-        saepe placeat ab. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nesciunt rem delectus at. Alias, reprehenderit cum?
-      </p>
+    <div
+      class="top"
+      style="background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url({{data[2][0].image}})"
+    >
+      <p>{{ data[2][0].content | truncate(350) }}</p>
       <div class="details">
         <div class="name">
           <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
@@ -315,79 +227,29 @@
               d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
             />
           </svg>
-          <span>Samuel Martins</span>
+          <span>{{ data[2][0].author }}</span>
         </div>
-        <div class="date">Published on: 03-04-2022</div>
+        <div class="date">Published on: {{ data[2][0].date }}</div>
       </div>
     </div>
   </div>
   <div class="articles">
+    {% for i in range(1, 7) %}
     <div class="content">
       <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
+        <img src="{{ data[2][i].image }}" alt="{{ data[2][i].title}}" />
       </div>
       <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
+        <a href="{{ data[2][i].url }}" target="blank">
+          {{ data[2][i].description | truncate(110)}}</a
         >
       </div>
+      <br />
+      <hr />
+      <br />
+      <p>{{ data[2][i].date }}</p>
     </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
-    <div class="content">
-      <div class="article-image">
-        <img src="../static/images/sample.jpg" alt="sample" />
-      </div>
-      <div class="article-content">
-        <a href="" target="blank">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          enim sequi. Libero molestias quia cupiditate.</a
-        >
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

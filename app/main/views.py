@@ -6,7 +6,7 @@ from ..requests import get_category_headlines, get_headlines, get_source_headlin
 @main.route("/")
 def home():
     overall = get_headlines("us")
-    finance = get_category_headlines("us", "finance")
+    finance = get_category_headlines("us", "business")
     entertainment = get_category_headlines("us", "entertainment")
     sources = get_sources()
     data = [overall, finance, entertainment, sources]
