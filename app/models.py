@@ -1,5 +1,5 @@
 class Article:
-    def __init__(self, source_name, author, title, description, url, image, date):
+    def __init__(self, source_name, author, title, description, url, image, date, content):
         self.source_name = source_name
         self.author = author 
         self.title = title
@@ -7,6 +7,7 @@ class Article:
         self.url = url
         self.image = image 
         self.date = date
+        self.content = content
 
 
 class Source:

@@ -5,4 +5,10 @@ from ..requests import get_category_headlines, get_headlines, get_source_headlin
 
 @main.route("/")
 def home():
-    return render_template("index.html")
+    overall = get_headlines("us")
+    finance = get_category_headlines("us", "finance")
+    entertainment = get_category_headlines("us", "entertainment")
+    sources = get_sources()
+    data = [overall, finance, entertainment, sources]
+
+    return render_template("index.html", data =  data)

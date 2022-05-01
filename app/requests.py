@@ -1,5 +1,7 @@
 from app import models
 import urllib.request,json
+import datetime
+import re
 
 Article = models.Article
 Source = models.Source
@@ -29,8 +31,12 @@ def get_all_articles(url):
 
         if headlines_response["articles"]:
            for item in list(headlines_response["articles"]):
-               if item["source"] and item["source"] and item["author"] and item["title"] and item["description"] and item["url"] and item["urlToImage"] and item["publishedAt"]:
-                    headlines.append(Article(item["source"]["name"], item["author"], item["title"], item["description"], item["url"], item["urlToImage"],item["publishedAt"]))
+               if item["source"] and item["source"] and item["author"] and item["title"] and item["description"] and item["url"] and item["urlToImage"] and item["publishedAt"] and item["content"]:
+                    regex = "([0-9]+)"
+                    result = re.split(regex, item["publishedAt"])
+                    date = result[5]+result[4]+result[3]+result[2]+result[1]
+                    
+                    headlines.append(Article(item["source"]["name"], item["author"], item["title"], item["description"], item["url"], item["urlToImage"], date, item["content"]))
 
         
     return headlines

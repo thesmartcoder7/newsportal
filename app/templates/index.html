@@ -14,36 +14,24 @@
 
 <!-- this is the latest block -->
 {% block latest %}
-<h3>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem
-  officia enim atque sit nisi expedita aliquid, consequatur illum omnis.
-</h3>
-<a href="">Read More . . . </a>
+<h3>{{ data[0][0].description }}</h3>
+<a href="{{ data[0][0].url }}" target="blank">Read More . . . </a>
 {% endblock %}
 
 <!-- this is the postlatest block -->
 {% block postlatest %}
 <section id="latest">
   <div class="first">
-    <h3 class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
-      harum.
-    </h3>
-    <a href="">Read More . . . </a>
+    <h3 class="description">{{ data[0][1].description | truncate(100)}}</h3>
+    <a href=" {{ data[0][1].url }}" target="blank">Read More . . . </a>
   </div>
   <div class="second">
-    <h3 class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
-      harum.
-    </h3>
-    <a href="">Read More . . . </a>
+    <h3 class="description">{{ data[0][2].description | truncate(100) }}</h3>
+    <a href=" {{ data[0][2].url }}" target="blank">Read More . . . </a>
   </div>
   <div class="third">
-    <h3 class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
-      harum.
-    </h3>
-    <a href="">Read More . . . </a>
+    <h3 class="description">{{ data[0][3].description | truncate(100) }}</h3>
+    <a href=" {{ data[0][3].url }}" target="blank">Read More . . . </a>
   </div>
 </section>
 {% endblock %}
@@ -59,18 +47,12 @@
   </div>
   <div class="banner">
     <div class="dummy">
-      <h3>This is the title of the article</h3>
+      <h3>{{ data[0][4].description | truncate(60) }}</h3>
       <br />
-      <a href="">Read Now</a>
+      <a href=" {{ data[0][4].url }}" target="blank">Read Now</a>
     </div>
     <div class="top">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam
-        provident beatae nam at, recusandae cupiditate vitae obcaecati
-        repellendus dignissimos voluptatum ut vero excepturi dolor quos magnam
-        saepe placeat ab. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nesciunt rem delectus at. Alias, reprehenderit cum?
-      </p>
+      <p>{{ data[0][4].content | truncate(350) }}</p>
       <div class="details">
         <div class="name">
           <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
@@ -79,9 +61,9 @@
               d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
             />
           </svg>
-          <span>Samuel Martins</span>
+          <span>{{ data[0][4].author }}</span>
         </div>
-        <div class="date">Published on: 03-04-2022</div>
+        <div class="date">Published on: {{ data[0][4].date }}</div>
       </div>
     </div>
   </div>
