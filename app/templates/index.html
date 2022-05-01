@@ -2,7 +2,43 @@
 
 <!-- title block -->
 {% block title%}
-<title>NewsPortal</title>
+<title>Home</title>
 {% endblock %}
 
 <!-- this is the latest block -->
+{% block latest %}
+<h3>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem
+  officia enim atque sit nisi expedita aliquid, consequatur illum omnis.
+</h3>
+<a href="">Read More . . . </a>
+{% endblock %}
+
+<!-- this is the postlatest block -->
+{% block postlatest %}
+<section id="latest">
+  <div class="first">
+    <h3 class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
+      harum.
+    </h3>
+    <a href="">Read More . . . </a>
+  </div>
+  <div class="second">
+    <h3 class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
+      harum.
+    </h3>
+    <a href="">Read More . . . </a>
+  </div>
+  <div class="third">
+    <h3 class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius illum
+      harum.
+    </h3>
+    <a href="">Read More . . . </a>
+  </div>
+</section>
+{% endblock %}
+<br />
+{% block content %} {% endblock %}
