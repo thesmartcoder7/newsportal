@@ -16,8 +16,14 @@ def home():
     return render_template("index.html", data =  data)
 
 
+# this is a simplet test route in case of a server overload
+# @main.route("/")
+# def home():
+#     return render_template("test.html")
+
+
 @main.route("/<title>")
 def category(title):
     headlines = get_source_headlines(title)
 
-    return render_template("category.html", headlines = headlines)
+    return render_template("category.html", headlines = headlines,  title = title)

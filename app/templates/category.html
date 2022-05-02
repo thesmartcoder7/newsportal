@@ -1,1 +1,14 @@
 {% extends "base.html" %}
+
+<!-- css block -->
+{% block css %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/category.css')}}"
+/>
+{% endblock %}
+
+<!-- title block -->
+{% block title %}
+<title>{{title}}</title>
+{% endblock %}

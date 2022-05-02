@@ -67,7 +67,11 @@ main {
   letter-spacing: 0.05vw;
 }
 
-#hero header .logo h1 span {
+#hero header .logo a {
+  text-decoration: none;
+}
+
+#hero header .logo a h1 span {
   color: #e9b018;
 }
 
