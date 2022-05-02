@@ -1,5 +1,5 @@
 __pycache__/
-virtual/
+requirements.txt
 start.sh
 */*.sh
 *.sh
