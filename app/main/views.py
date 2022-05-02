@@ -22,7 +22,7 @@ def home():
 #     return render_template("test.html")
 
 
-@main.route("/<title>")
+@main.route("/source/<title>")
 def category(title):
     headlines = get_source_headlines(title)
 
