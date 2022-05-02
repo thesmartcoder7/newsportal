@@ -1,0 +1,5 @@
+__pycache__/
+requirements.txt
+start.sh
+*/*.sh
+*.sh
