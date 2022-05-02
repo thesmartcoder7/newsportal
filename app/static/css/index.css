@@ -192,6 +192,10 @@
   font-weight: 700;
 }
 
+.articles .content p {
+  font-size: 0.9vw;
+}
+
 .articles .content .article-content a:hover {
   color: rgb(112, 112, 112);
 }

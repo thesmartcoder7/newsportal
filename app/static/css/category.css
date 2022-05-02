@@ -62,10 +62,14 @@
   text-decoration: none;
   margin-top: 2%;
   color: #1c1c1c;
-  font-size: 0.9vw;
+  font-size: 1vw;
   font-weight: 700;
 }
 
 .articles .content .article-content a:hover {
   color: rgb(112, 112, 112);
+}
+
+.articles .content p {
+  font-size: 0.9vw;
 }

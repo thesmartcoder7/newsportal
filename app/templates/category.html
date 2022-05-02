@@ -20,8 +20,12 @@
 
 <!-- this is the latest block -->
 {% block latest %}
+<!-- content check -->
+{% if headlines %} {% if headlines[0].description %}
 <h3>{{ headlines[0].description | truncate(150)}}</h3>
 <a href="{{ headlines[0].url }}" target="blank">Read More . . . </a>
+{% endif%} {% endif%}
+<!-- end check -->
 {% endblock %}
 
 <!-- this is the postlatest block -->
@@ -52,6 +56,7 @@
   </div>
 
   <div class="articles">
+    <!-- loop -->
     {% for piece in headlines %}
     <!-- if check -->
     {% if headlines[0] != piece and headlines[1] != piece and headlines[2] !=
@@ -62,7 +67,7 @@
       </div>
       <div class="article-content">
         <a href="{{ piece.url }}" target="blank">
-          {{ piece.description | truncate(110)}}</a
+          {{ piece.description | truncate(120)}}</a
         >
       </div>
       <br />
