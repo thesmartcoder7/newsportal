@@ -12,6 +12,11 @@
 <title>NewsPortal</title>
 {% endblock %}
 
+<!-- latest title block -->
+{% block latest_title%}
+<h2>latest</h2>
+{% endblock %}
+
 <!-- this is the latest block -->
 {% block latest %}
 <h3>{{ data[0][0].description | truncate(150)}}</h3>
