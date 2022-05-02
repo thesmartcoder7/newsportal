@@ -8,7 +8,9 @@ def home():
     overall = get_headlines("us")
     finance = get_category_headlines("us", "business")
     entertainment = get_category_headlines("us", "entertainment")
+    technology = get_category_headlines("us", "technology")
+    sports = get_category_headlines("us", "sports")
     sources = get_sources()
-    data = [overall, finance, entertainment, sources]
+    data = [overall, finance, entertainment, sources, technology, sports]
 
     return render_template("index.html", data =  data)

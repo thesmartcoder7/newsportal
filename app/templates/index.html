@@ -14,7 +14,7 @@
 
 <!-- this is the latest block -->
 {% block latest %}
-<h3>{{ data[0][0].description }}</h3>
+<h3>{{ data[0][0].description | truncate(150)}}</h3>
 <a href="{{ data[0][0].url }}" target="blank">Read More . . . </a>
 {% endblock %}
 
@@ -102,47 +102,16 @@
     <hr />
   </div>
   <div class="outlets">
+    {% for i in range(0, 16) %}
     <a href="">
-      <div class="outlet">outlet 1</div>
+      <div class="outlet">{{ data[3][i].name }}</div>
     </a>
-    <a href="">
-      <div class="outlet">outlet 2</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 3</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 4</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 5</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 6</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 7</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 8</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 9</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 10</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 11</div>
-    </a>
-    <a href="">
-      <div class="outlet">outlet 12</div>
-    </a>
+    {% endfor %}
   </div>
 </section>
 
 <!-- finance section -->
-<section id="finance">
+<section id="business">
   <div class="title">
     <h3>business</h3>
     <hr />
@@ -248,6 +217,118 @@
       <hr />
       <br />
       <p>{{ data[2][i].date }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- technology section -->
+<section id="technology">
+  <div class="title">
+    <h3>Technology</h3>
+    <hr />
+  </div>
+  <div class="banner">
+    <div class="dummy">
+      <h3>{{ data[4][0].description | truncate(50) }}</h3>
+      <br />
+      <a href=" {{ data[4][0].url }}" target="blank">Read Now</a>
+    </div>
+    <div
+      class="top"
+      style="background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url({{data[4][0].image}})"
+    >
+      <p>{{ data[4][0].content | truncate(350) }}</p>
+      <div class="details">
+        <div class="name">
+          <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
+            />
+          </svg>
+          <span>{{ data[4][0].author }}</span>
+        </div>
+        <div class="date">Published on: {{ data[4][0].date }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="articles">
+    {% for i in range(1, 7) %}
+    <div class="content">
+      <div class="article-image">
+        <img src="{{ data[4][i].image }}" alt="{{ data[2][i].title}}" />
+      </div>
+      <div class="article-content">
+        <a href="{{ data[4][i].url }}" target="blank">
+          {{ data[4][i].description | truncate(110)}}</a
+        >
+      </div>
+      <br />
+      <hr />
+      <br />
+      <p>{{ data[4][i].date }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- sports section -->
+<section id="sports">
+  <div class="title">
+    <h3>Sports</h3>
+    <hr />
+  </div>
+  <div class="banner">
+    <div class="dummy">
+      <h3>{{ data[5][0].description | truncate(50) }}</h3>
+      <br />
+      <a href=" {{ data[5][0].url }}" target="blank">Read Now</a>
+    </div>
+    <div
+      class="top"
+      style="background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url({{data[5][0].image}})"
+    >
+      <p>{{ data[5][0].content | truncate(350) }}</p>
+      <div class="details">
+        <div class="name">
+          <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
+            />
+          </svg>
+          <span>{{ data[5][0].author }}</span>
+        </div>
+        <div class="date">Published on: {{ data[5][0].date }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="articles">
+    {% for i in range(1, 7) %}
+    <div class="content">
+      <div class="article-image">
+        <img src="{{ data[5][i].image }}" alt="{{ data[5][i].title}}" />
+      </div>
+      <div class="article-content">
+        <a href="{{ data[5][i].url }}" target="blank">
+          {{ data[5][i].description | truncate(110)}}</a
+        >
+      </div>
+      <br />
+      <hr />
+      <br />
+      <p>{{ data[5][i].date }}</p>
     </div>
     {% endfor %}
   </div>
