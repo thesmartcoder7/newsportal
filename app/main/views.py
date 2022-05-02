@@ -14,3 +14,10 @@ def home():
     data = [overall, finance, entertainment, sources, technology, sports]
 
     return render_template("index.html", data =  data)
+
+
+@main.route("/<title>")
+def category(title):
+    headlines = get_source_headlines(title)
+
+    return render_template("category.html", headlines = headlines)

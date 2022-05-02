@@ -103,7 +103,7 @@
   </div>
   <div class="outlets">
     {% for i in range(0, 16) %}
-    <a href="">
+    <a href="{{url_for('main.category', title = data[3][i].id )}}">
       <div class="outlet">{{ data[3][i].name }}</div>
     </a>
     {% endfor %}

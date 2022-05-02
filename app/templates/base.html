@@ -40,11 +40,25 @@
               <input type="checkbox" name="menu" id="menu" />
             </label>
             <ul>
-              <li><a href="">home</a></li>
-              <li><a href="#business">business</a></li>
-              <li><a href="#sports">sports</a></li>
-              <li><a href="#entertainment">entertainment</a></li>
-              <li><a href="#technology">technology</a></li>
+              <li><a href="{{url_for('main.home')}}">home</a></li>
+              <li>
+                <a href="{{url_for('main.home', _anchor='business')}}"
+                  >business</a
+                >
+              </li>
+              <li>
+                <a href="{{url_for('main.home', _anchor='sports')}}">sports</a>
+              </li>
+              <li>
+                <a href="{{url_for('main.home', _anchor='entertainment')}}"
+                  >entertainment</a
+                >
+              </li>
+              <li>
+                <a href="{{url_for('main.home', _anchor='technology')}}"
+                  >technology</a
+                >
+              </li>
             </ul>
           </div>
         </header>
