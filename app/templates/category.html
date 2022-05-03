@@ -60,18 +60,20 @@
     {% if headlines[0] != piece and headlines[1] != piece and headlines[2] !=
     piece and headlines[3] != piece%}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ piece.image }}" alt="{{ piece.title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ piece.image }}" alt="{{ piece.title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ piece.url }}" target="blank">
+            {{ piece.description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ piece.url }}" target="blank">
-          {{ piece.description | truncate(120)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p>{{ piece.date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p>{{ piece.date }}</p>
     </div>
     {% endif %}
     <!-- end if check -->
