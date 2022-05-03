@@ -82,18 +82,20 @@
   <div class="articles">
     {% for i in range(5, 11) %}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ data[0][i].image }}" alt="{{ data[0][i].title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ data[0][i].image }}" alt="{{ data[0][i].title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ data[0][i].url }}" target="blank">
+            {{ data[0][i].description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ data[0][i].url }}" target="blank">
-          {{ data[0][i].description | truncate(110)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p class="date">{{ data[0][i].date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p class="date">{{ data[0][i].date }}</p>
     </div>
     {% endfor %}
   </div>
@@ -153,18 +155,20 @@
   <div class="articles">
     {% for i in range(1, 7) %}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ data[1][i].image }}" alt="{{ data[1][i].title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ data[1][i].image }}" alt="{{ data[1][i].title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ data[1][i].url }}" target="blank">
+            {{ data[1][i].description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ data[1][i].url }}" target="blank">
-          {{ data[1][i].description | truncate(110)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p>{{ data[1][i].date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p>{{ data[1][i].date }}</p>
     </div>
     {% endfor %}
   </div>
@@ -209,18 +213,20 @@
   <div class="articles">
     {% for i in range(1, 7) %}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ data[2][i].image }}" alt="{{ data[2][i].title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ data[2][i].image }}" alt="{{ data[2][i].title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ data[2][i].url }}" target="blank">
+            {{ data[2][i].description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ data[2][i].url }}" target="blank">
-          {{ data[2][i].description | truncate(110)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p>{{ data[2][i].date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p>{{ data[2][i].date }}</p>
     </div>
     {% endfor %}
   </div>
@@ -265,18 +271,20 @@
   <div class="articles">
     {% for i in range(1, 7) %}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ data[4][i].image }}" alt="{{ data[2][i].title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ data[4][i].image }}" alt="{{ data[2][i].title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ data[4][i].url }}" target="blank">
+            {{ data[4][i].description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ data[4][i].url }}" target="blank">
-          {{ data[4][i].description | truncate(110)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p>{{ data[4][i].date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p>{{ data[4][i].date }}</p>
     </div>
     {% endfor %}
   </div>
@@ -321,18 +329,20 @@
   <div class="articles">
     {% for i in range(1, 7) %}
     <div class="content">
-      <div class="article-image">
-        <img src="{{ data[5][i].image }}" alt="{{ data[5][i].title}}" />
+      <div class="upper">
+        <div class="article-image">
+          <img src="{{ data[5][i].image }}" alt="{{ data[5][i].title}}" />
+        </div>
+        <div class="article-content">
+          <a href="{{ data[5][i].url }}" target="blank">
+            {{ data[5][i].description | truncate(100)}}</a
+          >
+        </div>
       </div>
-      <div class="article-content">
-        <a href="{{ data[5][i].url }}" target="blank">
-          {{ data[5][i].description | truncate(110)}}</a
-        >
+      <div class="lower">
+        <hr />
+        <p class="date">{{ data[5][i].date }}</p>
       </div>
-      <br />
-      <hr />
-      <br />
-      <p class="date">{{ data[5][i].date }}</p>
     </div>
     {% endfor %}
   </div>
